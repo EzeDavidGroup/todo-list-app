@@ -1,0 +1,106 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:500px;
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+h1{
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:25px;
+}
+
+.input-area{
+    display:flex;
+    gap:10px;
+    margin-bottom:25px;
+}
+
+.input-area input{
+    flex:1;
+    padding:14px;
+    border:2px solid #dbeafe;
+    border-radius:10px;
+    outline:none;
+    font-size:16px;
+}
+
+.input-area input:focus{
+    border-color:#2563eb;
+}
+
+.input-area button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:14px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.input-area button:hover{
+    background:#1d4ed8;
+}
+
+#taskList{
+    list-style:none;
+}
+
+#taskList li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f8fafc;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:12px;
+}
+
+.delete-btn{
+    background:#ef4444;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#dc2626;
+}
+
+@media(max-width:500px){
+
+.input-area{
+    flex-direction:column;
+}
+
+.input-area button{
+    width:100%;
+}
+
+}
