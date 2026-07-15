@@ -28,10 +28,21 @@ function createTask(task){
     const li = document.createElement("li");
 
     li.innerHTML = `
-        <span>${task}</span>
-        <button class="delete-btn">Delete</button>
-    `;
+    <span class="task-text">${task}</span>
 
+    <div>
+
+        <button class="complete-btn">✔</button>
+
+        <button class="delete-btn">Delete</button>
+
+    </div>
+`;
+li.querySelector(".complete-btn").addEventListener("click", () => {
+
+    li.querySelector(".task-text").classList.toggle("completed");
+
+});
     li.querySelector(".delete-btn").addEventListener("click", () => {
 
         li.remove();
