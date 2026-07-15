@@ -104,3 +104,29 @@ h1{
 }
 
 }
+
+.complete-btn{
+
+background:#22c55e;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:8px;
+cursor:pointer;
+margin-right:8px;
+
+}
+
+.complete-btn:hover{
+
+background:#16a34a;
+
+}
+
+.completed{
+
+text-decoration:line-through;
+opacity:.6;
+color:#6b7280;
+
+}
