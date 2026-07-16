@@ -48,11 +48,22 @@ li.querySelector(".edit-btn").addEventListener("click", () => {
 
     const taskText = li.querySelector(".task-text");
 
-    const newTask = prompt("Edit your task:", taskText.textContent);
+    const oldTask = taskText.textContent;
+
+    const newTask = prompt("Edit your task:", oldTask);
 
     if (newTask !== null && newTask.trim() !== "") {
 
         taskText.textContent = newTask.trim();
+
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+        const index = tasks.indexOf(oldTask);
+
+        if (index !== -1) {
+            tasks[index] = newTask.trim();
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
 
     }
 
