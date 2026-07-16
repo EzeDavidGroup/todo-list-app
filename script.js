@@ -33,7 +33,7 @@ function createTask(task){
     <div>
 
         <button class="complete-btn">✔</button>
-
+        <button class="edit-btn">Edit</button>
         <button class="delete-btn">Delete</button>
 
     </div>
@@ -43,6 +43,21 @@ li.querySelector(".complete-btn").addEventListener("click", () => {
     li.querySelector(".task-text").classList.toggle("completed");
 
 });
+
+li.querySelector(".edit-btn").addEventListener("click", () => {
+
+    const taskText = li.querySelector(".task-text");
+
+    const newTask = prompt("Edit your task:", taskText.textContent);
+
+    if (newTask !== null && newTask.trim() !== "") {
+
+        taskText.textContent = newTask.trim();
+
+    }
+
+});
+    
     li.querySelector(".delete-btn").addEventListener("click", () => {
 
         li.remove();
