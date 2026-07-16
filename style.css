@@ -105,6 +105,24 @@ h1{
 
 }
 
+.edit-btn{
+
+background:#3b82f6;
+color:white;
+border:none;
+padding:8px 12px;
+border-radius:8px;
+cursor:pointer;
+margin-right:8px;
+
+}
+
+.edit-btn:hover{
+
+background:#2563eb;
+
+}
+
 .complete-btn{
 
 background:#22c55e;
